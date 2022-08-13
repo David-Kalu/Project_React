@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 
-const FetchData = (url, options) => {
-  return (
-    useEffect(() => {
+export const fetchData = async (url, options) => {
 
-    }, [])
-}
+  const res = await fetch(url, options);
+  const data = await res.json();
 
-export default FetchData
+  return data;   
+};
+
